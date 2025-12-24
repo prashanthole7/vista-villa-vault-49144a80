@@ -12,7 +12,7 @@ import {
 import { cities, propertyTypes } from "@/data/properties";
 
 const budgetRanges = [
-  { label: "Any Budget", value: "" },
+  { label: "Any Budget", value: "all" },
   { label: "Under ₹50 Lakhs", value: "0-5000000" },
   { label: "₹50 Lakhs - ₹1 Cr", value: "5000000-10000000" },
   { label: "₹1 Cr - ₹2 Cr", value: "10000000-20000000" },
@@ -28,9 +28,9 @@ export function SearchBar() {
 
   const handleSearch = () => {
     const params = new URLSearchParams();
-    if (city) params.set("city", city);
-    if (propertyType) params.set("type", propertyType);
-    if (budget) {
+    if (city && city !== "all") params.set("city", city);
+    if (propertyType && propertyType !== "all") params.set("type", propertyType);
+    if (budget && budget !== "all") {
       const [min, max] = budget.split("-");
       if (min) params.set("minPrice", min);
       if (max) params.set("maxPrice", max);
@@ -46,7 +46,7 @@ export function SearchBar() {
             <SelectValue placeholder="Select City" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Cities</SelectItem>
+            <SelectItem value="all">All Cities</SelectItem>
             {cities.map((c) => (
               <SelectItem key={c} value={c}>{c}</SelectItem>
             ))}
@@ -58,7 +58,7 @@ export function SearchBar() {
             <SelectValue placeholder="Property Type" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Types</SelectItem>
+            <SelectItem value="all">All Types</SelectItem>
             {propertyTypes.map((t) => (
               <SelectItem key={t} value={t}>{t}</SelectItem>
             ))}
@@ -71,7 +71,7 @@ export function SearchBar() {
           </SelectTrigger>
           <SelectContent>
             {budgetRanges.map((b) => (
-              <SelectItem key={b.value || "any"} value={b.value}>{b.label}</SelectItem>
+              <SelectItem key={b.value} value={b.value}>{b.label}</SelectItem>
             ))}
           </SelectContent>
         </Select>

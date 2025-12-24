@@ -43,7 +43,7 @@ export default function Listings() {
 
   const updateFilter = (key: string, value: string) => {
     const params = new URLSearchParams(searchParams);
-    if (value) {
+    if (value && value !== "all") {
       params.set(key, value);
     } else {
       params.delete(key);
@@ -134,7 +134,7 @@ export default function Listings() {
                           <SelectValue placeholder="All Cities" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="">All Cities</SelectItem>
+                          <SelectItem value="all">All Cities</SelectItem>
                           {cities.map((c) => (
                             <SelectItem key={c} value={c}>{c}</SelectItem>
                           ))}
@@ -150,7 +150,7 @@ export default function Listings() {
                           <SelectValue placeholder="All Types" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="">All Types</SelectItem>
+                          <SelectItem value="all">All Types</SelectItem>
                           {propertyTypes.map((t) => (
                             <SelectItem key={t} value={t}>{t}</SelectItem>
                           ))}
@@ -166,7 +166,7 @@ export default function Listings() {
                           <SelectValue placeholder="Any BHK" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="">Any BHK</SelectItem>
+                          <SelectItem value="all">Any BHK</SelectItem>
                           {bhkOptions.map((b) => (
                             <SelectItem key={b} value={String(b)}>{b} BHK</SelectItem>
                           ))}
@@ -182,7 +182,7 @@ export default function Listings() {
                           <SelectValue placeholder="Any Status" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="">Any Status</SelectItem>
+                          <SelectItem value="all">Any Status</SelectItem>
                           {statusOptions.map((s) => (
                             <SelectItem key={s} value={s}>{s}</SelectItem>
                           ))}
@@ -274,7 +274,7 @@ export default function Listings() {
                             <SelectValue placeholder="City" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="">All Cities</SelectItem>
+                            <SelectItem value="all">All Cities</SelectItem>
                             {cities.map((c) => (
                               <SelectItem key={c} value={c}>{c}</SelectItem>
                             ))}
@@ -285,7 +285,7 @@ export default function Listings() {
                             <SelectValue placeholder="Type" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="">All Types</SelectItem>
+                            <SelectItem value="all">All Types</SelectItem>
                             {propertyTypes.map((t) => (
                               <SelectItem key={t} value={t}>{t}</SelectItem>
                             ))}
@@ -296,7 +296,7 @@ export default function Listings() {
                             <SelectValue placeholder="BHK" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="">Any BHK</SelectItem>
+                            <SelectItem value="all">Any BHK</SelectItem>
                             {bhkOptions.map((b) => (
                               <SelectItem key={b} value={String(b)}>{b} BHK</SelectItem>
                             ))}
@@ -307,7 +307,7 @@ export default function Listings() {
                             <SelectValue placeholder="Status" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="">Any Status</SelectItem>
+                            <SelectItem value="all">Any Status</SelectItem>
                             {statusOptions.map((s) => (
                               <SelectItem key={s} value={s}>{s}</SelectItem>
                             ))}
