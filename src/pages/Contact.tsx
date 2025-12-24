@@ -117,13 +117,13 @@ export default function Contact() {
                       </div>
                     </a>
 
-                    <a href="mailto:info@propindia.com" className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
+                    <a href="mailto:prashanthole7@gmail.com" className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
                       <div className="p-3 rounded-full bg-primary/10">
                         <Mail className="h-5 w-5 text-primary" />
                       </div>
                       <div>
                         <div className="font-medium">Email</div>
-                        <div className="text-sm text-muted-foreground">info@propindia.com</div>
+                        <div className="text-sm text-muted-foreground">prashanthole7@gmail.com</div>
                       </div>
                     </a>
                   </CardContent>
