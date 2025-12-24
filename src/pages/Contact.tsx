@@ -107,7 +107,7 @@ export default function Contact() {
                       </div>
                     </a>
 
-                    <a href={`https://wa.me/919876543210?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
+                    <a href={`https://wa.me/918999816425?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
                       <div className="p-3 rounded-full bg-whatsapp/10">
                         <MessageCircle className="h-5 w-5 text-whatsapp" />
                       </div>
