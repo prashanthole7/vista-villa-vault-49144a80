@@ -9,40 +9,25 @@ import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SEOHead } from "@/components/SEOHead";
 import { toast } from "@/hooks/use-toast";
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    message: "",
+    message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     const subject = encodeURIComponent("Property Inquiry from PropIndia Website");
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
-    );
-    
+    const body = encodeURIComponent(`Name: ${formData.name}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`);
     window.location.href = `mailto:info@propindia.com?subject=${subject}&body=${body}`;
-    
     toast({
       title: "Opening email client",
-      description: "Please send the email to complete your inquiry.",
+      description: "Please send the email to complete your inquiry."
     });
   };
-
-  const whatsappMessage = encodeURIComponent(
-    "Hi, I'm interested in properties on PropIndia. Please help me find my dream home."
-  );
-
-  return (
-    <>
-      <SEOHead
-        title="Contact Us"
-        description="Get in touch with PropIndia for property inquiries. Call, WhatsApp, or email us. Our team is ready to help you find your dream home."
-      />
+  const whatsappMessage = encodeURIComponent("Hi, I'm interested in properties on PropIndia. Please help me find my dream home.");
+  return <>
+      <SEOHead title="Contact Us" description="Get in touch with PropIndia for property inquiries. Call, WhatsApp, or email us. Our team is ready to help you find your dream home." />
       <div className="min-h-screen flex flex-col">
         <Header />
 
@@ -70,41 +55,30 @@ export default function Contact() {
                       <label htmlFor="name" className="text-sm font-medium">
                         Your Name
                       </label>
-                      <Input
-                        id="name"
-                        placeholder="Enter your name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                      />
+                      <Input id="name" placeholder="Enter your name" value={formData.name} onChange={e => setFormData({
+                      ...formData,
+                      name: e.target.value
+                    })} required />
                     </div>
 
                     <div className="space-y-2">
                       <label htmlFor="phone" className="text-sm font-medium">
                         Phone Number
                       </label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="+91 98765 43210"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        required
-                      />
+                      <Input id="phone" type="tel" placeholder="+91 98765 43210" value={formData.phone} onChange={e => setFormData({
+                      ...formData,
+                      phone: e.target.value
+                    })} required />
                     </div>
 
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium">
                         Your Message
                       </label>
-                      <Textarea
-                        id="message"
-                        placeholder="Tell us what you're looking for..."
-                        rows={4}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        required
-                      />
+                      <Textarea id="message" placeholder="Tell us what you're looking for..." rows={4} value={formData.message} onChange={e => setFormData({
+                      ...formData,
+                      message: e.target.value
+                    })} required />
                     </div>
 
                     <Button type="submit" className="w-full" size="lg">
@@ -123,25 +97,17 @@ export default function Contact() {
                     <CardTitle>Quick Contact</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <a
-                      href="tel:+919876543210"
-                      className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-                    >
+                    <a href="tel:+919876543210" className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
                       <div className="p-3 rounded-full bg-primary/10">
                         <Phone className="h-5 w-5 text-primary" />
                       </div>
                       <div>
                         <div className="font-medium">Call Us</div>
-                        <div className="text-sm text-muted-foreground">+91 98765 43210</div>
+                        <div className="text-sm text-muted-foreground">+91 8999816425</div>
                       </div>
                     </a>
 
-                    <a
-                      href={`https://wa.me/919876543210?text=${whatsappMessage}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-                    >
+                    <a href={`https://wa.me/919876543210?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
                       <div className="p-3 rounded-full bg-whatsapp/10">
                         <MessageCircle className="h-5 w-5 text-whatsapp" />
                       </div>
@@ -151,10 +117,7 @@ export default function Contact() {
                       </div>
                     </a>
 
-                    <a
-                      href="mailto:info@propindia.com"
-                      className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-                    >
+                    <a href="mailto:info@propindia.com" className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
                       <div className="p-3 rounded-full bg-primary/10">
                         <Mail className="h-5 w-5 text-primary" />
                       </div>
@@ -226,6 +189,5 @@ export default function Contact() {
         <Footer />
         <FloatingWhatsApp />
       </div>
-    </>
-  );
+    </>;
 }
