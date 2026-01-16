@@ -31,6 +31,13 @@ const Index = () => {
             Launching soon
           </p>
         </div>
+        
+        {/* Footer */}
+        <div className="absolute bottom-6 left-0 right-0 z-10 text-center">
+          <p className="text-sm text-white/60">
+            © 2026 Bharatwise. All rights reserved
+          </p>
+        </div>
       </div>
     </>
   );
