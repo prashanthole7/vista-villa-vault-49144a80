@@ -21,12 +21,10 @@ const Index = () => {
         
         {/* Content */}
         <div className="relative z-10 text-center px-6">
-          {/* Brand Name with Glass Effect */}
-          <div className="inline-block px-8 py-6 sm:px-12 sm:py-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl mb-6">
-            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-wider text-white drop-shadow-lg">
-              BHARATWISE
-            </h1>
-          </div>
+          {/* Brand Name */}
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-wider text-white mb-6 drop-shadow-2xl">
+            BHARATWISE
+          </h1>
           
           {/* Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl font-light tracking-widest text-white/80 uppercase">
