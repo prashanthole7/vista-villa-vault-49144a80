@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import natureBg from "@/assets/nature-bg.jpg";
 
 const Index = () => {
   return (
@@ -8,29 +9,25 @@ const Index = () => {
         <meta name="description" content="BHARATWISE is launching soon. Stay tuned for something extraordinary." />
       </Helmet>
       
-      <div className="relative min-h-screen bg-background overflow-hidden flex items-center justify-center">
-        {/* Aurora Background */}
-        <div className="aurora-container">
-          <div className="aurora aurora-1"></div>
-          <div className="aurora aurora-2"></div>
-          <div className="aurora aurora-3"></div>
-        </div>
+      <div className="relative min-h-screen overflow-hidden flex items-center justify-center">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${natureBg})` }}
+        />
         
-        {/* Noise Overlay */}
-        <div className="noise-overlay"></div>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
         
         {/* Content */}
         <div className="relative z-10 text-center px-6">
-          {/* Glow Effect */}
-          <div className="brand-glow"></div>
-          
           {/* Brand Name */}
-          <h1 className="brand-name text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-wider text-foreground mb-6">
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-wider text-white mb-6 drop-shadow-2xl">
             BHARATWISE
           </h1>
           
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl font-light tracking-widest text-muted-foreground uppercase">
+          <p className="text-lg sm:text-xl md:text-2xl font-light tracking-widest text-white/80 uppercase">
             Launching soon
           </p>
         </div>
