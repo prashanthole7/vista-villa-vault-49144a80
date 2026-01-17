@@ -260,7 +260,7 @@
 
 /* Ken Burns Animation for Background */
 .animate-ken-burns {
-  animation: ken-burns 30s ease-in-out infinite alternate;
+  animation: ken-burns 15s ease-in-out infinite alternate;
   transform-origin: center center;
 }
 
