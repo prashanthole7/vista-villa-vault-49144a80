@@ -10,9 +10,9 @@ const Index = () => {
       </Helmet>
       
       <div className="relative min-h-screen overflow-hidden flex items-center justify-center">
-        {/* Background Image */}
+        {/* Background Image with Ken Burns Animation */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-ken-burns"
           style={{ backgroundImage: `url(${natureBg})` }}
         />
         
