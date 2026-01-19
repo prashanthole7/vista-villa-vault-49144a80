@@ -45,7 +45,9 @@ const Index = () => {
             <Linkedin className="h-5 w-5 text-white" />
           </a>
           <a 
-            href="mailto:bharatwiseco@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&to=bharatwiseco@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors backdrop-blur-sm"
             aria-label="Contact us via email"
           >
