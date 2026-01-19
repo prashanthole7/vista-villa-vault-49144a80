@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Linkedin, Mail } from "lucide-react";
 import natureBg from "@/assets/nature-bg.jpg";
 
 const Index = () => {
@@ -30,6 +31,26 @@ const Index = () => {
           <p className="text-lg sm:text-xl md:text-2xl font-light tracking-widest text-white/80 uppercase">
             Launching soon
           </p>
+        </div>
+        
+        {/* Social Links */}
+        <div className="absolute bottom-16 left-0 right-0 z-10 flex justify-center gap-6">
+          <a 
+            href="https://www.linkedin.com/company/bharatwiseco/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors backdrop-blur-sm"
+            aria-label="Follow us on LinkedIn"
+          >
+            <Linkedin className="h-5 w-5 text-white" />
+          </a>
+          <a 
+            href="mailto:bharatwiseco@gmail.com"
+            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors backdrop-blur-sm"
+            aria-label="Contact us via email"
+          >
+            <Mail className="h-5 w-5 text-white" />
+          </a>
         </div>
         
         {/* Footer */}
