@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Linkedin, Mail } from "lucide-react";
 import natureBg from "@/assets/nature-bg.jpg";
+import { BharatwiseHeader } from "@/components/BharatwiseHeader";
 
 const Index = () => {
   return (
@@ -9,6 +10,8 @@ const Index = () => {
         <title>BHARATWISE — Launching Soon</title>
         <meta name="description" content="BHARATWISE is launching soon. Stay tuned for something extraordinary." />
       </Helmet>
+      
+      <BharatwiseHeader />
       
       <div className="relative min-h-screen overflow-hidden flex items-center justify-center">
         {/* Background Image with Ken Burns Animation */}
