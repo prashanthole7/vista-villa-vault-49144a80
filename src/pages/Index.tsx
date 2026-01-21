@@ -14,9 +14,9 @@ const Index = () => {
       <BharatwiseHeader />
       
       <div className="relative min-h-screen overflow-hidden flex items-center justify-center">
-        {/* Background Image with Ken Burns Animation */}
+        {/* Background Image with subtle slow zoom */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-ken-burns"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-slow-zoom"
           style={{ backgroundImage: `url(${natureBg})` }}
         />
         
