@@ -14,14 +14,8 @@ const Index = () => {
       <BharatwiseHeader />
       
       <div className="relative min-h-screen overflow-hidden flex items-center justify-center">
-        {/* Background Image with subtle slow zoom */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-slow-zoom"
-          style={{ backgroundImage: `url(${natureBg})` }}
-        />
-        
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+        {/* Solid Background */}
+        <div className="absolute inset-0 bg-[hsl(230,25%,8%)]" />
         
         {/* Content */}
         <div className="relative z-10 text-center px-6">
