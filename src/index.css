@@ -258,25 +258,25 @@
   }
 }
 
-/* Ken Burns Animation for Background */
-.animate-ken-burns {
-  animation: ken-burns 15s ease-in-out infinite alternate;
+/* Gentle slow zoom - minimal animation */
+.animate-slow-zoom {
+  animation: slow-zoom 30s ease-in-out infinite alternate;
   transform-origin: center center;
 }
 
-@keyframes ken-burns {
+@keyframes slow-zoom {
   0% {
-    transform: scale(1) translate(0, 0);
+    transform: scale(1);
   }
   100% {
-    transform: scale(1.15) translate(-2%, -1%);
+    transform: scale(1.03);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-ken-burns {
+  .animate-slow-zoom {
     animation: none !important;
-    transform: scale(1) translate(0, 0);
+    transform: scale(1);
   }
 }
 
