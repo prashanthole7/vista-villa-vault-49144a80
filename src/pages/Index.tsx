@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Linkedin, Mail } from "lucide-react";
-import natureBg from "@/assets/nature-bg.jpg";
+import galaxyBg from "@/assets/galaxy-bg.jpg";
 import { BharatwiseHeader } from "@/components/BharatwiseHeader";
-
 const Index = () => {
   return (
     <>
@@ -14,8 +13,14 @@ const Index = () => {
       <BharatwiseHeader />
       
       <div className="relative min-h-screen overflow-hidden flex items-center justify-center">
-        {/* Solid Background */}
-        <div className="absolute inset-0 bg-[hsl(230,25%,8%)]" />
+        {/* Galaxy Background with animation */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-slow-zoom"
+          style={{ backgroundImage: `url(${galaxyBg})` }}
+        />
+        
+        {/* Dark Overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40" />
         
         {/* Content */}
         <div className="relative z-10 text-center px-6">
