@@ -258,9 +258,9 @@
   }
 }
 
-/* Gentle slow zoom - minimal animation */
+/* Gentle slow zoom - noticeable yet subtle */
 .animate-slow-zoom {
-  animation: slow-zoom 30s ease-in-out infinite alternate;
+  animation: slow-zoom 12s ease-in-out infinite alternate;
   transform-origin: center center;
 }
 
@@ -269,7 +269,7 @@
     transform: scale(1);
   }
   100% {
-    transform: scale(1.03);
+    transform: scale(1.08);
   }
 }
 
