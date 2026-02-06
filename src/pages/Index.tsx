@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Linkedin, Mail } from "lucide-react";
-import galaxyBg from "@/assets/galaxy-bg.jpg";
+import earthImg from "@/assets/earth.png";
 
 const Index = () => {
   return (
@@ -10,15 +10,18 @@ const Index = () => {
         <meta name="description" content="BHARATWISE is launching soon. Stay tuned for something extraordinary." />
       </Helmet>
       
-      <div className="relative min-h-screen overflow-hidden flex items-center justify-center">
-        {/* Galaxy Background with animation */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-slow-zoom"
-          style={{ backgroundImage: `url(${galaxyBg})` }}
-        />
+      <div className="relative min-h-screen overflow-hidden flex items-center justify-center bg-[#030712]">
+        {/* Rotating Earth */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src={earthImg} 
+            alt="" 
+            className="w-[80vmin] h-[80vmin] md:w-[60vmin] md:h-[60vmin] object-contain animate-earth-rotate opacity-80"
+          />
+        </div>
         
         {/* Dark Overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-radial from-transparent via-[#030712]/60 to-[#030712]" />
         
         {/* Content */}
         <div className="relative z-10 text-center px-6">

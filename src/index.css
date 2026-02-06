@@ -258,25 +258,28 @@
   }
 }
 
-/* Gentle slow zoom - noticeable yet subtle */
-.animate-slow-zoom {
-  animation: slow-zoom 12s ease-in-out infinite alternate;
-  transform-origin: center center;
+/* Rotating Earth animation */
+.animate-earth-rotate {
+  animation: earth-rotate 60s linear infinite;
 }
 
-@keyframes slow-zoom {
+@keyframes earth-rotate {
   0% {
-    transform: scale(1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: scale(1.08);
+    transform: rotate(360deg);
   }
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-stops));
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-slow-zoom {
+  .animate-earth-rotate {
     animation: none !important;
-    transform: scale(1);
   }
 }
 
